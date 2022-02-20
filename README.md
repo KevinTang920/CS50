@@ -26,6 +26,7 @@
 
 ## Calculations
 - In the terminal window, we can also start typing commands like make ca, and then press the tab key for the terminal to automatically complete our command. The up and down arrows also allow us to see previous commands and run them without typing them again.
+- comments //
 
 ## Constant
 
