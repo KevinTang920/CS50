@@ -50,3 +50,9 @@
 $ clang hello.c
 $
 ```
+- Nothing seems to happen, which means there were no errors. And if we run list, with ls, we see an a.out file in our directory. The filename is just the default for clang's output, and we can run it:
+```
+$ ./a.out
+hello, world
+```
+- We can add a command-line argument, or an input to a program on the command-line as extra words after the program's name. We can run `clang -0 hello hello.c`, where clang is the name of the program, and -o hello and hello.c are additional arguments. We're telling clang to use hello as the output filename, and use hello.c as the source code. Now, we can see hello being created as output.
