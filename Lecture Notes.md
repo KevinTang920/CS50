@@ -46,7 +46,7 @@
 # Compiling
 - make is actually just a program that calls clang, a compiler named for the "C language".
 - can compile source code, hello.c, directly by running the command clang hello.c in the terminal:
-、、、
+```
 $ clang hello.c
 $
-、、、
+```
