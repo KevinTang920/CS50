@@ -42,4 +42,11 @@
 ## Imprecision, overflow
 - Specify the number of decimal places displayed: %.5f
 
-
+# Lecture 2
+# Compiling
+- make is actually just a program that calls clang, a compiler named for the "C language".
+- can compile source code, hello.c, directly by running the command clang hello.c in the terminal:
+、、、
+$ clang hello.c
+$
+、、、
