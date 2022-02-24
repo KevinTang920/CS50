@@ -37,13 +37,13 @@
 - In C, a char is surrounded y single quotes, ', instead of double quotes for strings.
 
 ## Loops, functions
-- We define our function with `void meow(void)`. The first void means that there isn't a return value for our function. The void within the parentheses also indicates that the function doesn't take any arguments, or inputs.
+- We define our function with `void meow(void)`. The first `void` means that there isn't a return value for our function. The `void` within the parentheses also indicates that the function doesn't take any arguments, or inputs.
 
 ## Imprecision, overflow
 - Specify the number of decimal places displayed: %.5f
 
 # Lecture 2
-# Compiling
+## Compiling
 - make is actually just a program that calls `clang`, a compiler named for the "C language".
 - can compile source code, hello.c, directly by running the command `clang hello.c` in the terminal:
 ```
@@ -57,4 +57,20 @@ hello, world
 ```
 - We can add a command-line argument, or an input to a program on the command-line as extra words after the program's name. We can run `clang -0 hello hello.c`, where `clang` is the name of the program, and `-o hello` and `hello.c` are additional arguments. We're telling `clang` to use `hello` as the output filename, and use `hello.c` as the source code. Now, we can see `hello` being created as output.
 
+## Debugging
+- step over. run the next line.
+- step into. Let us go into the function called on that line
 
+## Memory
+
+- 1 byte = 8 bits
+  - bool, 1 byte
+  - char, 1 byte
+  - double, 8 bytes
+  - float, 4 bytes
+  - int, 4 bytes
+  - long, 8 bytes
+  - string, ? bytes
+- RAM, random-access memory, tat stores zeroes and ones
+
+## Arrays
