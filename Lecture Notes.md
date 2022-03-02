@@ -74,3 +74,11 @@ hello, world
 - RAM, random-access memory, tat stores zeroes and ones
 
 ## Arrays
+- int scores[3],declare an array of three integers
+
+## Strings
+
+- In C, strings end with a special character, `'\0'`, or a byte with all eight bits set to 0, so our programs have a way of knowing where the string ends. This character is called the null character, or NUL.
+- Libraries and functions: manual pages(https://manual.cs50.io/)
+
+## Command-line arguments
