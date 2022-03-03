@@ -82,3 +82,39 @@ hello, world
 - Libraries and functions: manual pages(https://manual.cs50.io/)
 
 ## Command-line arguments
+
+- It turns out that our `main` function also returns an interger value called an **exit status**. By default, our `main` function returns `0` to indicate nothing went wrong, but we can write a program to return a different value:
+`
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[])
+{
+    if (argc != 2)
+    {
+        printf("missing command-line argument\n");
+        return 1;
+    }
+    printf("hello, %s\n", argv[1]);
+    return 0;
+}
+`
+`
+$ make arg
+$ ./arg
+missing command-line argument
+$ ./arg David
+hello, David
+`
+- If there is no return value after `missing command-line argument`
+
+`
+$ make arg
+$ ./arg
+missing command-line argument
+hello, (null)
+`
+  - Once we run `return 1`, our program will **exit early** with an exit status of 1.(here can be any number, return 0 or 1 or 2...)
+  - We'll write return 0 explicitly at the end of our program here, even though we don't technically need to since C will automatically return `0` for us.
+
+
