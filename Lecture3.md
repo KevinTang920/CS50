@@ -32,7 +32,7 @@ For each door from left to right
         Return true
 Retrurn false
 ```
-  - `Retrun false` is outside the for loop, since we only want to do that after we've looked behind all doors.
+   - `Retrun false` is outside the for loop, since we only want to do that after we've looked behind all doors.
 
 - Rewrite pseudocode to be a little closer to C:
 ```
