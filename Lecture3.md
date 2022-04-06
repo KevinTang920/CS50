@@ -23,4 +23,22 @@
   - Θ(log n)
   - Θ(1)
 
-- Linear search, binary search
+# Linear search, binary search
+- Linear search: one by one, from left to right.
+- pseudocode
+```
+For each door from left to right
+    If number is behind dorr
+        Return true
+Retrurn false
+```
+  - `Retrun false` is outside the for loop, since we only want to do that after we've looked behind all doors.
+
+- Rewrite pseudocode to be a little closer to C:
+```
+For i from 0 to n-1
+    If number begind doors[i]
+        Return true
+Return false
+```
+- For linear search, big *O* is *O*(n), big Omega is Ω(n)
