@@ -41,4 +41,27 @@ For i from 0 to n-1
         Return true
 Return false
 ```
-- For linear search, big *O* is *O*(n), big Omega is Ω(n)
+- For linear search, big *O* is *O*(n), big Omega is Ω(1).
+- Binary search: know the numbers are sorted, star in the middle, know go left or right.
+```
+If no doors
+    Return false
+If number behind middle door
+    Return true
+Else if number < middle door
+    Search left half
+Else if number > middle door 
+    Search right half
+```
+- more like C
+```
+If no doors
+    Return false
+If number behind doors[middle]
+    Return true
+Else if number < doors[middle]
+    Search door[0] through doors[middle -1]
+Else if number > doors[middle]
+    Search doors[middle + 1] through doors[n -1]
+```
+- For binary search: Big *O* is *O*(log n), big Omega is Ω(1).
