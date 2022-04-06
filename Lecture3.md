@@ -65,4 +65,3 @@ Else if number > doors[middle]
     Search doors[middle + 1] through doors[n -1]
 ```
 - For binary search: Big *O* is *O*(log n), big Omega is Ω(1).
-  - fsaf
