@@ -65,3 +65,56 @@ Else if number > doors[middle]
     Search doors[middle + 1] through doors[n -1]
 ```
 - For binary search: Big *O* is *O*(log n), big Omega is Ω(1).
+
+# Searching with code
+
+- ```number.c```
+```
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int numbers[] = {4, 6, 8, 2, 7, 5, 0}
+    for (int i = 0; i < 7; i++)
+    {
+        if (numbers[i] == 0)
+        {
+            printff("Found\n")
+            return 0;
+        }
+    }
+    printf("Not found\n")
+    return 1;
+}
+```
+  - ```return 0``` indicate success, ```return 1``` indicate an error code.
+- ```name.c```
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Tim", "Alex")
+    for (int i = 0; i < 7; i++)
+    {
+        if (names[i] == "Ron")
+        {
+            printf("Found\n")
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
+}
+```
+  - When we try to compile our program, we get an error.
+  - Can not compare strings directly in C.
+  - ```strcmp```,string compare: returns a negative value if the first string comes before the second string, ```0```if the strings are the same, and a positive value if the first string comes after the second string.
+  - Chage conditional to ```if (strcmp(names[i], "Ron") == 0)```
+  - ```if (strcmp(names[i], "Ron"))```,any non-zero value, positive or negative, would be cosidered ```true```, which would be the *opposite* of what we want.
+    - We could actually write ```if(!strcmp(names[i], "Ron"))``` to invert the value, but it would be arguably worse design.
+
+
