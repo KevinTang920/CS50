@@ -80,7 +80,7 @@ int main(void)
     {
         if (numbers[i] == 0)
         {
-            printff("Found\n")
+            printf("Found\n")
             return 0;
         }
     }
