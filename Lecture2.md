@@ -11,7 +11,7 @@ $
 $ ./a.out
 hello, world
 ```
-- We can add a command-line argument, or an input to a program on the command-line as extra words after the program's name. We can run `clang -0 hello hello.c`, where `clang` is the name of the program, and `-o hello` and `hello.c` are additional arguments. We're telling `clang` to use `hello` as the output filename, and use `hello.c` as the source code. Now, we can see `hello` being created as output.
+- We can add a command-line argument, or an input to a program on the command-line as extra words after the program's name. We can run `clang -o hello hello.c`, where `clang` is the name of the program, and `-o hello` and `hello.c` are additional arguments. We're telling `clang` to use `hello` as the output filename, and use `hello.c` as the source code. Now, we can see `hello` being created as output.
 
 ## Debugging
 - step over. run the next line.
