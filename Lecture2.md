@@ -27,7 +27,7 @@ hello, world
   - int, 4 bytes
   - long, 8 bytes
   - string, ? bytes
-- RAM, random-access memory, tat stores zeroes and ones
+- RAM, random-access memory, that stores zeroes and ones
 
 ## Arrays
 - int scores[3],declare an array of three integers
