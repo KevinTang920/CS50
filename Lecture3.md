@@ -37,7 +37,7 @@ Retrurn false
 - Rewrite pseudocode to be a little closer to C:
 ```
 For i from 0 to n-1
-    If number begind doors[i]
+    If number behind doors[i]
         Return true
 Return false
 ```
