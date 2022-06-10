@@ -188,3 +188,84 @@ int main(void)
 }
 ```
 - In coumputer science, **encapsulation** is the idea that related data is grouped together, and here we've encapsulated two pieces of information, ```name``` and ```number``` into the same data structure.
+## Sorting
+### Selection sort
+- Select the smallest nmber and swap.
+- For this algorithm, we started with looking at all _n_ elements, then only _n-1_, then _n-2_, and so on:
+  n + (n-1) + (n-2)+...+1
+  n(n+1)/2
+ （n²+n)/2
+  n²/2+n/2
+  _O_(n²)
+- In the best case, where th list is already sorted, our selection sort algorithm will still look at all the numbers and repeat the loop, so it has a lower bound for running time of Ω(n²).
+
+## Bubble sort
+- Look at **pairs** of numbers and swap them if they are out of order.
+- To determine the running time for bubble sort, we have _n-1_ comparisons in the loop, and _n-1_ loops:
+  (n-1) * (n-1)
+  n² - 2n + 1
+  _O_(n²)
+- The lower bound for running time of bubble sort would be Ω(n).
+
+## Recursion
+- **Recurison** is the ability for a function to call itself. 
+- pyramid
+```
+#
+##
+###
+```
+- Code
+```
+#include <cs50.h>
+#include <stdio.h>
+
+void draw(int n);
+int main(void)
+{
+    int height = get_int("Height: ");
+    
+    draw(height);
+}
+
+void draw(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+```
+- But notice that a pyramid of height 4 is actually a pyramid of height 3 with an extra row of 4 blocks added on. And a pyramid of height 3 is a pyramid of height 2 with an extra row of 3 blocks. A pyramid of height 2 is a pyramid of height 1 with an extra row of 2 blocks. And finally, a pyramid of height 1 is a pyramid of height 0(no blocks) with a row of 1 block added.
+- Since a pyramid is a recursive structure, we can write a recursive function to draw a pyramid, a function that calls itself to draw a smller pyramid before adding another row:
+```
+#include <cs50.h>
+#include <stdio.h>
+
+void draw(int n);
+
+int main(void)
+{
+    int height = get_int("Height: ");
+    
+    draw(height);
+}
+
+void draw(int n)
+{
+    if (n <= 0)
+    {
+        return;
+    }
+    draw(n -1);
+    
+    for (int i = 0; i < n; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
