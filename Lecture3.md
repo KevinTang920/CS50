@@ -269,3 +269,13 @@ void draw(int n)
     }
     printf("\n");
 }
+```
+- We can rewrite our draw function to use itself.
+- if ```n``` is ```0``` (or negative somehow) we'll stop without printing anything. And we need to make sure we stop for some base case, so our function doesn't call itself over and over forever.
+- Otherwise, we'll call ```draw``` again, to print a pyramid of size ```n-1``` first.
+- Then, we'll print the row of blocks we need for our pyramid, of size ```n```.
+
+## Merge sort
+- Sort each half, and then merge thme together.
+- The upper bound for running time for merge sort is  _O_(nlogn).
+- The lower bound of merge sort is still Ω(nlogn), since we have to do all the work even if the list is sorted. So merge sort also has θ(nlogn).
