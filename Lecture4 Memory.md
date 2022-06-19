@@ -23,4 +23,23 @@ Week4/ $ make pointer
 Week4/ $ ./pointer
 0x7ffcfd6bf0ec
 ```
- - &emsp;&emsp; ```%p``` is the format code to print an address with ```printf```. And we only need to use the name of the variable, ```p```, after we've declared it.
+- ```%p``` is the format code to print an address with ```printf```. And we only need to use the name of the variable, ```p```, after we've declared it.
+- With C, we can also go to specific addresses in memory, which might cause segmentation faults, where we've tried to read or write to memory we don't have permission to. 
+- The ```*``` operator is also the **dereference operator**, which goes to an address to get the value stored there. For example, we can say:
+```
+#include <stdio.h>
+
+int main(void)
+{
+    int n = 50;
+    int *p = &n;
+    printf("%p\n", p);
+    printf("%i\n", *p);
+}
+```
+```
+Week4/ $ make pointer
+Week4/ $ ./pointer
+0x7ffd161eb47c
+50
+```
