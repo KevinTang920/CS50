@@ -23,4 +23,4 @@ Week4/ $ make pointer
 Week4/ $ ./pointer
 0x7ffcfd6bf0ec
 ```
-&emsp;- ```%p``` is the format code to print an address with ```printf```. And we only need to use the name of the variable, ```p```, after we've declared it.
+&emsp;&emsp; - ```%p``` is the format code to print an address with ```printf```. And we only need to use the name of the variable, ```p```, after we've declared it.
